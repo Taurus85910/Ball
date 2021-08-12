@@ -10,8 +10,7 @@ public class MoneyDisplay : MonoBehaviour
     [SerializeField] private CoinCollector _coinCollector;
     
     private Text _text;
-    private int _moneyCount = 0;
-    
+
     private void Start()
     {
         _text = GetComponent<Text>();
@@ -28,9 +27,8 @@ public class MoneyDisplay : MonoBehaviour
 
     }
 
-    private void OnCoinCollected()
+    private void OnCoinCollected(int money)
     {
-        _moneyCount++;
-        _text.text = _moneyCount.ToString();
+        _text.text = money.ToString();
     }
 }

@@ -5,14 +5,23 @@ using UnityEngine;
 
 public abstract class Generator : MonoBehaviour
 {
-    [SerializeField] protected Transform _player;
-    [SerializeField] protected Vector2 _yBorders;
-    [SerializeField] protected float _spawnRadius;
-    [SerializeField] protected float _indention;
-    [SerializeField] protected GameObject _template;
+    [SerializeField] private Transform _player;
+    [SerializeField] private Vector2 _yBorders;
+    [SerializeField] private float _spawnRadius;
+    [SerializeField] private float _indention;
+    [SerializeField] private GameObject _template;
 
-    private protected abstract void Update();
-
-
+    protected virtual void Update()
+    {
+        if (transform.position.x > _player.position.x + _spawnRadius) return;
+        SpawnObject(_yBorders,_template);
+    }
+    
+    protected void UpdatePosition()
+    {
+        transform.position = new Vector3(_player.position.x + _indention, 0, 0);
+    }
+    
+    protected abstract void SpawnObject(Vector2 yBorders, GameObject template);
 
 }

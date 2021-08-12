@@ -7,12 +7,9 @@ using Random = UnityEngine.Random;
 
 public class BlockGenerator : Generator
 {
-    private protected override void Update()
+    protected override void SpawnObject(Vector2 yBorders, GameObject template)
     {
-        if (transform.position.x < _player.position.x + _spawnRadius)
-        {
-            Instantiate(_template, new Vector2(transform.position.x,Random.Range(_yBorders.x,_yBorders.y)),Quaternion.identity);
-            transform.position = new Vector3(_player.position.x + _indention,0,0);
-        }
+        Instantiate(template, new Vector2(transform.position.x, Random.Range(yBorders.x,yBorders.y)), Quaternion.identity);
+        UpdatePosition();
     }
 }

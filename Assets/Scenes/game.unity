@@ -512,7 +512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e02ec83cc6e5114fbc4fd64ee169116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forcePower: 100
+  _jumpPower: 2
+  _layer:
+    serializedVersion: 2
+    m_Bits: 64
+  _checkRadius: 1.5
 --- !u!114 &317335945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,8 +617,8 @@ MonoBehaviour:
   _indention: 40
   _template: {fileID: 9055243676857898649, guid: c567273c1f294b040b15deedabdbb67d, type: 3}
   _coinCountBorders: {x: 1, y: 10}
-  _xIndent: 1
-  _yIndent: 0.1
+  _xDistance: 1
+  _yDistance: 0.1
 --- !u!4 &877775560
 Transform:
   m_ObjectHideFlags: 0
@@ -642,7 +646,7 @@ GameObject:
   - component: {fileID: 1029136311}
   - component: {fileID: 1029136315}
   - component: {fileID: 1029136314}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

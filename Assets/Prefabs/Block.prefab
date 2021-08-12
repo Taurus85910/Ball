@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2516416221942383199}
   - component: {fileID: -703004463990587049}
   - component: {fileID: 5636016387545329114}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 7510229798357951724}
   - component: {fileID: 2973993559360450914}
   - component: {fileID: 7576882697351887433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'SideZone '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
